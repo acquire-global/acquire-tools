@@ -9,11 +9,6 @@ const roboto = Roboto({
 	weight: ['300', '400', '500', '700'],
 })
 
-export const metadata = {
-	title: 'Acquire Tools',
-	description: 'Acquire Tools',
-}
-
 export default function RootLayout({
 	children,
 }: {
