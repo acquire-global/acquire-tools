@@ -17,7 +17,7 @@ import { destinations } from 'acquire-xml-generator'
 import { useState } from 'react'
 import Delete from '@mui/icons-material/Delete'
 
-const destinationsOptions = Object.keys(destinations)
+const destinationsOptions = Object.keys(destinations).sort()
 
 type MappingLineProps = {
 	mapping: OptionalDestinationMapping
@@ -89,7 +89,7 @@ const MappingLine: React.FC<MappingLineProps> = ({
 								name='skip'
 								checked={mapping.skip ?? false}
 								onChange={handleChange}
-								inputProps={{ 'aria-label': 'controlled' }}
+								inputProps={{ 'aria-label': 'Skip?' }}
 							/>
 						}
 						label='Skip?'

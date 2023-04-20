@@ -1,15 +1,16 @@
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import MappingLine from './MappingLine'
 import { MappingConfig } from 'acquire-xml-generator'
 import {
 	OptionalDestinationMapping,
 	useMappingsContext,
 } from './MappingsContext'
-import { Button, Stack } from '@mui/material'
+import { Button, FormControlLabel, Paper, Stack, Switch } from '@mui/material'
 import { generateSupplierFeedSettings } from 'acquire-xml-generator'
 
 const MappingsArea: React.FC = () => {
 	const { mappings, createMapping, updateMapping } = useMappingsContext()
+	const [hasHeader, sethasHeader] = useState(true)
 
 	const generateMappingUpdater = (index: number) => {
 		return (mapping: OptionalDestinationMapping) => {
@@ -34,6 +35,7 @@ const MappingsArea: React.FC = () => {
 		console.log(`mappings: `, mappings)
 		try {
 			const xml = generateSupplierFeedSettings({
+				hasHeader,
 				mappings: mappings as MappingConfig[],
 			})
 			console.log('XML:\n', xml)
@@ -51,6 +53,19 @@ const MappingsArea: React.FC = () => {
 	return (
 		<form autoComplete='off' onSubmit={handleSubmit}>
 			<Stack gap={3}>
+				<Paper elevation={3} sx={{ padding: 3 }}>
+					<FormControlLabel
+						control={
+							<Switch
+								name='hasHeader'
+								checked={hasHeader}
+								onChange={(e) => sethasHeader(e.target.checked)}
+								inputProps={{ 'aria-label': 'Has Header Row?' }}
+							/>
+						}
+						label='Has Header Row?'
+					/>
+				</Paper>
 				{mappings.map((mapping, index) => (
 					<MappingLine
 						mapping={mapping}

@@ -1,13 +1,14 @@
 {
 	"name": "acquire-tools",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Web interface for using various Acquire tools",
 	"private": false,
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint"
+		"lint": "next lint",
+		"updatePackages": "npm uninstall acquire-xml-generator && npm install github:acquire-global/acquire-xml-generator"
 	},
 	"dependencies": {
 		"@emotion/react": "^11.10.6",
