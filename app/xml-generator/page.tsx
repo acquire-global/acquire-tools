@@ -2,15 +2,15 @@
 
 import { destinations } from 'acquire-xml-generator'
 import RequiredDestinationTag from './RequiredDestinationTag'
-import MappingsArea from './MappingsArea'
+import FeedSettingsArea from './FeedSettingsArea'
 import { Container, Paper, Stack } from '@mui/material'
-import { MappingsProvider } from './MappingsContext'
+import { FeedSettingsProvider } from './FeedSettingsContext'
 
 export default function Page() {
 	const destinationsArray = Object.values(destinations)
 
 	return (
-		<MappingsProvider>
+		<FeedSettingsProvider>
 			<Container>
 				<Paper elevation={0}>
 					<Stack gap={3}>
@@ -30,11 +30,11 @@ export default function Page() {
 						</Paper>
 						<Paper elevation={1} sx={{ padding: 3 }}>
 							<h2>Create Mappings</h2>
-							<MappingsArea />
+							<FeedSettingsArea />
 						</Paper>
 					</Stack>
 				</Paper>
 			</Container>
-		</MappingsProvider>
+		</FeedSettingsProvider>
 	)
 }

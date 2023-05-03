@@ -2,12 +2,12 @@
 
 import { Button } from '@mui/material'
 import { Destination } from 'acquire-xml-generator'
-import { useMappingsContext } from './MappingsContext'
+import { useFeedSettingsContext } from './FeedSettingsContext'
 
 const RequiredDestinationTag: React.FC<{ destination: Destination }> = ({
 	destination,
 }) => {
-	const { mappings, createMapping } = useMappingsContext()
+	const { mappings, createMapping } = useFeedSettingsContext()
 	const isUsed = mappings.some(
 		(mapping) => mapping.destination === destination.name
 	)

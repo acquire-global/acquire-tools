@@ -9,19 +9,16 @@ import {
 	TextField,
 } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
-import {
-	OptionalDestinationMapping,
-	useMappingsContext,
-} from './MappingsContext'
-import { destinations } from 'acquire-xml-generator'
+import { useFeedSettingsContext } from './FeedSettingsContext'
+import { MappingConfig, destinations } from 'acquire-xml-generator'
 import { useState } from 'react'
 import Delete from '@mui/icons-material/Delete'
 
 const destinationsOptions = Object.keys(destinations).sort()
 
 type MappingLineProps = {
-	mapping: OptionalDestinationMapping
-	mappingUpdater: (mapping: OptionalDestinationMapping) => void
+	mapping: MappingConfig
+	mappingUpdater: (mapping: MappingConfig) => void
 	isLast: boolean
 }
 
@@ -49,11 +46,11 @@ const MappingLine: React.FC<MappingLineProps> = ({
 	const handleDestinationChange = (event: any, value: string | null) => {
 		mappingUpdater({
 			...mapping,
-			destination: value as OptionalDestinationMapping['destination'],
+			destination: value as MappingConfig['destination'],
 		})
 	}
 
-	const { mappings, removeMapping } = useMappingsContext()
+	const { mappings, removeMapping } = useFeedSettingsContext()
 
 	const [destinationText, setDestinationText] = useState(
 		mapping.destination ?? ''
