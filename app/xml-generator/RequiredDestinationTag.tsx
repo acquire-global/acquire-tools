@@ -17,7 +17,7 @@ const RequiredDestinationTag: React.FC<{ destination: Destination }> = ({
 			createMapping({
 				destination: destination.name,
 				sourceIndex: mappings.length
-					? mappings[mappings.length - 1].sourceIndex + 1
+					? mappings[mappings.length - 1].sourceIndex! + 1
 					: 0,
 			})
 		}
