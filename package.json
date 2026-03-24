@@ -15,7 +15,6 @@
 		"@emotion/styled": "^11.11.0",
 		"@mui/icons-material": "^5.14.18",
 		"@mui/material": "^5.14.18",
-		"acquire-xml-generator": "+git://github.com/acquire-global/acquire-xml-generator.git",
 		"next": "^14.0.3",
 		"papaparse": "^5.4.1",
 		"react": "^18.2.0",
