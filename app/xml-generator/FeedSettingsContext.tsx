@@ -21,7 +21,7 @@ type FeedSettings = {
 	updateMapping: (index: number, mapping: MappingConfig) => void
 	changeFileSetting: (
 		setting: keyof FileSettings,
-		value: FileSettings[keyof FileSettings]
+		value: FileSettings[keyof FileSettings],
 	) => void
 }
 
@@ -32,7 +32,7 @@ const defaultState: FeedSettings = {
 		appendMissingColumns: false,
 		skipRows: 0,
 		columnDelimiter: ',',
-		rowDelimiter: '\\n',
+		rowDelimiter: '\\r\\n',
 		textDelimiter: '"',
 		encoding: 'UTF-8',
 	},
@@ -59,7 +59,7 @@ export const FeedSettingsProvider: React.FC<{
 	const removeMapping = (mapping: MappingConfig) => {
 		setFeedSettings((currentFeedSettings) => {
 			const newMappings = currentFeedSettings.mappings.filter(
-				(m) => m !== mapping
+				(m) => m !== mapping,
 			)
 			return { ...currentFeedSettings, mappings: newMappings }
 		})
@@ -75,7 +75,7 @@ export const FeedSettingsProvider: React.FC<{
 
 	const changeFileSetting = (
 		setting: keyof FileSettings,
-		value: FileSettings[keyof FileSettings]
+		value: FileSettings[keyof FileSettings],
 	) => {
 		setFeedSettings((currentFeedSettings) => {
 			const newFileSettings = {
