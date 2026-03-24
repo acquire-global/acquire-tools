@@ -20,6 +20,9 @@ importers:
       '@mui/material':
         specifier: ^5.14.18
         version: 5.18.0(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      acquire-xml-generator:
+        specifier: acquire-global/acquire-xml-generator
+        version: https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/3648c432e8cfc2967a89b659b60e9acfc0d2ccbe
       next:
         specifier: ^14.0.3
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -597,6 +600,10 @@ packages:
     engines: {node: '>=0.4.0'}
     hasBin: true
 
+  acquire-xml-generator@https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/3648c432e8cfc2967a89b659b60e9acfc0d2ccbe:
+    resolution: {tarball: https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/3648c432e8cfc2967a89b659b60e9acfc0d2ccbe}
+    version: 0.0.10
+
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
 
@@ -979,6 +986,10 @@ packages:
 
   fast-levenshtein@2.0.6:
     resolution: {integrity: sha512-DCXu6Ifhqcks7TZKY3Hxp3y6qphY5SJZmrWMDrKcERSOXWQdMhU9Ig/PYrzyw/ul9jOIyh0N4M0tbC5hodg8dw==}
+
+  fast-xml-parser@4.5.5:
+    resolution: {integrity: sha512-cK9c5I/DwIOI7/Q7AlGN3DuTdwN61gwSfL8rvuVPK+0mcCNHHGxRrpiFtaZZRfRMJL3Gl8B2AFlBG6qXf03w9A==}
+    hasBin: true
 
   fastq@1.20.1:
     resolution: {integrity: sha512-GGToxJ/w1x32s/D2EKND7kTil4n8OVk/9mycTc4VDza13lOvpUZTGX3mFSCtV9ksdGBVzvsyAVLM6mHFThxXxw==}
@@ -1688,6 +1699,9 @@ packages:
     resolution: {integrity: sha512-6fPc+R4ihwqP6N/aIv2f1gMH8lOVtWQHoqC4yK6oSDVVocumAsfCqjkXnqiYMhmMwS/mEHLp7Vehlt3ql6lEig==}
     engines: {node: '>=8'}
 
+  strnum@1.1.2:
+    resolution: {integrity: sha512-vrN+B7DBIoTTZjnPNewwhx6cBA/H+IS7rfW68n7XxC1y7uoiGQBxaKzqucGUgavX15dJgiGztLJ8vxuEzwqBdA==}
+
   styled-jsx@5.1.1:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
@@ -2376,6 +2390,10 @@ snapshots:
 
   acorn@8.16.0: {}
 
+  acquire-xml-generator@https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/3648c432e8cfc2967a89b659b60e9acfc0d2ccbe:
+    dependencies:
+      fast-xml-parser: 4.5.5
+
   ajv@6.14.0:
     dependencies:
       fast-deep-equal: 3.1.3
@@ -2937,6 +2955,10 @@ snapshots:
   fast-json-stable-stringify@2.1.0: {}
 
   fast-levenshtein@2.0.6: {}
+
+  fast-xml-parser@4.5.5:
+    dependencies:
+      strnum: 1.1.2
 
   fastq@1.20.1:
     dependencies:
@@ -3718,6 +3740,8 @@ snapshots:
   strip-bom@3.0.0: {}
 
   strip-json-comments@3.1.1: {}
+
+  strnum@1.1.2: {}
 
   styled-jsx@5.1.1(react@18.3.1):
     dependencies:
