@@ -9,9 +9,6 @@ export default function Home() {
 					<Link href='/xml-generator'>XML Generator</Link>
 				</li>
 				<li>
-					<Link href='/brand-mapper'>Brand Mapper</Link>
-				</li>
-				<li>
 					<Link href='/image-collection-creator'>Image Collection Creator</Link>
 				</li>
 			</ul>
