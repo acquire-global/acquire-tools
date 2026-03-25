@@ -1,6 +1,9 @@
 import { useRef } from 'react'
 import MappingLine from './MappingLine'
-import { MappingConfig } from 'acquire-xml-generator'
+import {
+	MappingConfig,
+	generateSupplierFeedSettings,
+} from '@acquire-global/xml-generator'
 import { useFeedSettingsContext } from './FeedSettingsContext'
 import {
 	Button,
@@ -12,7 +15,6 @@ import {
 	TextField,
 } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
-import { generateSupplierFeedSettings } from 'acquire-xml-generator'
 
 const FeedSettingsArea: React.FC = () => {
 	const {
@@ -90,7 +92,7 @@ const FeedSettingsArea: React.FC = () => {
 										onChange={(e) =>
 											changeFileSetting(
 												'appendMissingColumns',
-												e.target.checked
+												e.target.checked,
 											)
 										}
 										inputProps={{ 'aria-label': 'Append Missing Columns?' }}

@@ -1,6 +1,6 @@
 'use client'
 
-import { MappingConfig } from 'acquire-xml-generator'
+import { MappingConfig } from '@acquire-global/xml-generator'
 import { createContext, useContext, useState } from 'react'
 
 type FileSettings = {

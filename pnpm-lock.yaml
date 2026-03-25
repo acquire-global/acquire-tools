@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@acquire-global/xml-generator':
+        specifier: ^1.0.0
+        version: 1.0.0
       '@emotion/react':
         specifier: ^11.11.1
         version: 11.14.0(@types/react@18.3.28)(react@18.3.1)
@@ -20,9 +23,6 @@ importers:
       '@mui/material':
         specifier: ^5.14.18
         version: 5.18.0(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@emotion/styled@11.14.1(@emotion/react@11.14.0(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react@18.3.1))(@types/react@18.3.28)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      acquire-xml-generator:
-        specifier: acquire-global/acquire-xml-generator
-        version: https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/9a4e2daa347456a12d4a19b68989030a43950ea6
       next:
         specifier: ^14.0.3
         version: 14.2.35(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -59,6 +59,9 @@ importers:
         version: 14.2.35(eslint@8.57.1)(typescript@5.9.3)
 
 packages:
+
+  '@acquire-global/xml-generator@1.0.0':
+    resolution: {integrity: sha512-X2dByvBiwV3Z95wDZXn2qhqs/o121trI3evfepFBMXlwUIBEwoUY79hzyizFksKrWEUZpAuc9Z2Q24YpwmwyrA==}
 
   '@babel/code-frame@7.29.0':
     resolution: {integrity: sha512-9NhCeYjq9+3uxgdtp20LSiJXJvN0FeCtNGpJxuMFZ1Kv3cWUNb6DOhJwUvcVCzKGR66cw4njwM6hrJLqgOwbcw==}
@@ -599,10 +602,6 @@ packages:
     resolution: {integrity: sha512-UVJyE9MttOsBQIDKw1skb9nAwQuR5wuGD3+82K6JgJlm/Y+KI92oNsMNGZCYdDsVtRHSak0pcV5Dno5+4jh9sw==}
     engines: {node: '>=0.4.0'}
     hasBin: true
-
-  acquire-xml-generator@https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/9a4e2daa347456a12d4a19b68989030a43950ea6:
-    resolution: {tarball: https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/9a4e2daa347456a12d4a19b68989030a43950ea6}
-    version: 0.0.11
 
   ajv@6.14.0:
     resolution: {integrity: sha512-IWrosm/yrn43eiKqkfkHis7QioDleaXQHdDVPKg0FSwwd/DuvyX79TZnFOnYpB7dcsFAMmtFztZuXPDvSePkFw==}
@@ -1833,6 +1832,10 @@ packages:
 
 snapshots:
 
+  '@acquire-global/xml-generator@1.0.0':
+    dependencies:
+      fast-xml-parser: 4.5.5
+
   '@babel/code-frame@7.29.0':
     dependencies:
       '@babel/helper-validator-identifier': 7.28.5
@@ -2389,10 +2392,6 @@ snapshots:
       acorn: 8.16.0
 
   acorn@8.16.0: {}
-
-  acquire-xml-generator@https://codeload.github.com/acquire-global/acquire-xml-generator/tar.gz/9a4e2daa347456a12d4a19b68989030a43950ea6:
-    dependencies:
-      fast-xml-parser: 4.5.5
 
   ajv@6.14.0:
     dependencies:

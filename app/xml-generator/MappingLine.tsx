@@ -10,7 +10,7 @@ import {
 } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
 import { useFeedSettingsContext } from './FeedSettingsContext'
-import { MappingConfig, destinations } from 'acquire-xml-generator'
+import { MappingConfig, destinations } from '@acquire-global/xml-generator'
 import { useState } from 'react'
 import Delete from '@mui/icons-material/Delete'
 
@@ -53,7 +53,7 @@ const MappingLine: React.FC<MappingLineProps> = ({
 	const { mappings, removeMapping } = useFeedSettingsContext()
 
 	const [destinationText, setDestinationText] = useState(
-		mapping.destination ?? ''
+		mapping.destination ?? '',
 	)
 
 	return (
@@ -97,7 +97,7 @@ const MappingLine: React.FC<MappingLineProps> = ({
 						options={destinationsOptions}
 						getOptionDisabled={(option) => {
 							return mappings.some(
-								(m) => m.destination === option && m !== mapping
+								(m) => m.destination === option && m !== mapping,
 							)
 						}}
 						disabled={mapping.skip}

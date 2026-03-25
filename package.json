@@ -7,10 +7,10 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start",
-		"lint": "next lint",
-		"updatePackages": "pnpm uninstall acquire-xml-generator && pnpm install acquire-xml-generator"
+		"lint": "next lint"
 	},
 	"dependencies": {
+		"@acquire-global/xml-generator": "^1.0.0",
 		"@emotion/react": "^11.11.1",
 		"@emotion/styled": "^11.11.0",
 		"@mui/icons-material": "^5.14.18",
@@ -19,8 +19,7 @@
 		"papaparse": "^5.4.1",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
-		"typescript": "^5.3.2",
-		"acquire-xml-generator": "acquire-global/acquire-xml-generator"
+		"typescript": "^5.3.2"
 	},
 	"devDependencies": {
 		"@types/node": "^20.10.0",
