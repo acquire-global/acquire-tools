@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '@mui/material'
-import { Destination } from 'acquire-xml-generator'
+import { Destination } from '@acquire-global/xml-generator'
 import { useFeedSettingsContext } from './FeedSettingsContext'
 
 const RequiredDestinationTag: React.FC<{ destination: Destination }> = ({
@@ -9,7 +9,7 @@ const RequiredDestinationTag: React.FC<{ destination: Destination }> = ({
 }) => {
 	const { mappings, createMapping } = useFeedSettingsContext()
 	const isUsed = mappings.some(
-		(mapping) => mapping.destination === destination.name
+		(mapping) => mapping.destination === destination.name,
 	)
 
 	const handleClick = () => {

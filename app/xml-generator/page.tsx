@@ -1,6 +1,6 @@
 'use client'
 
-import { destinations } from 'acquire-xml-generator'
+import { destinations } from '@acquire-global/xml-generator'
 import RequiredDestinationTag from './RequiredDestinationTag'
 import FeedSettingsArea from './FeedSettingsArea'
 import { Container, Paper, Stack } from '@mui/material'
@@ -24,7 +24,7 @@ export default function Page() {
 											key={destination.index}
 											destination={destination}
 										/>
-									) : null
+									) : null,
 								)}
 							</Stack>
 						</Paper>

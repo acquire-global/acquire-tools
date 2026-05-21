@@ -1,5 +1,5 @@
 import { NextResponse } from 'next/server'
-import { generateSupplierFeedSettings } from 'acquire-xml-generator'
+import { generateSupplierFeedSettings } from '@acquire-global/xml-generator'
 
 export async function POST(request: Request) {
 	try {
