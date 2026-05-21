@@ -11,6 +11,9 @@ export default function Home() {
 				<li>
 					<Link href='/image-collection-creator'>Image Collection Creator</Link>
 				</li>
+				<li>
+					<Link href='/ftp-uploader'>FTP Uploader</Link>
+				</li>
 			</ul>
 		</main>
 	)
